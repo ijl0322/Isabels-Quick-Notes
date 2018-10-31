@@ -39,7 +39,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gesture(_:)))
     swipeGestureRecognizer.direction = .down
     notesTextView.addGestureRecognizer(swipeGestureRecognizer)
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+      notesTextView.text = userDefaults.string(forKey: "notes") ?? ""
+    }
   }
 
   override func didReceiveMemoryWarning() {
