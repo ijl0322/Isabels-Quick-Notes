@@ -11,13 +11,21 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+  @IBAction func openApp(_ sender: UIButton) {
+    let launchString = "isabeljlee://"
+    self.extensionContext?.open(URL(string: launchString)!, completionHandler:nil)
+  }
+  
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var notesLabel: UILabel!
   override func viewDidLoad() {
         super.viewDidLoad()
-        var notes = ""
+        var notes = "Nothing!"
         if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
           notes = userDefaults.string(forKey: "notes") ?? "Nothing!"
+          if notes == "" {
+            notes = "Nothing!"
+          }
         }
         notesLabel.text = notes
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
@@ -46,7 +54,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
       let expanded = activeDisplayMode == .expanded
       preferredContentSize = expanded ? CGSize(width: maxSize.width, height: 200) : maxSize
-      notesLabel.alpha = expanded ? 0 : 1
-      imageView.alpha = expanded ? 1 : 0
+      if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+        let backgroundImageOn = userDefaults.bool(forKey: "toggleBackgroundImage")
+        if backgroundImageOn {
+          notesLabel.alpha = expanded ? 0 : 1
+          imageView.alpha = expanded ? 1 : 0
+        } else {
+          notesLabel.alpha = 1
+          imageView.alpha = 0
+        }
+      }
     }
 }

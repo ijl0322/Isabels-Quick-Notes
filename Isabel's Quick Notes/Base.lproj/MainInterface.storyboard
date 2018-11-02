@@ -18,23 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9En-JK-8fq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42" userLabel="notes">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cd-Q2-dRm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <connections>
+                                    <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Cpa-Av-oWA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9En-JK-8fq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" symbolic="YES" id="0Q0-KW-PJ6"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="3Cd-Q2-dRm" secondAttribute="bottom" id="3ZT-Wt-8hB"/>
                             <constraint firstItem="9En-JK-8fq" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="4lj-TX-Veb"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" symbolic="YES" id="6Vq-gs-PHe"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" symbolic="YES" id="L8K-9R-egU"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3Cd-Q2-dRm" secondAttribute="trailing" id="OFy-Hn-PEi"/>
                             <constraint firstItem="9En-JK-8fq" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="OGV-Sc-gBs"/>
                             <constraint firstItem="9En-JK-8fq" firstAttribute="bottom" secondItem="ssy-KU-ocm" secondAttribute="bottom" id="TiA-pu-w1d"/>
+                            <constraint firstItem="3Cd-Q2-dRm" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="ioR-9u-Bld"/>
+                            <constraint firstItem="3Cd-Q2-dRm" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="jot-Ow-S9A"/>
                             <constraint firstItem="9En-JK-8fq" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="lFm-Up-NSu"/>
                             <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" symbolic="YES" id="mYS-Cv-VNx"/>
                         </constraints>
