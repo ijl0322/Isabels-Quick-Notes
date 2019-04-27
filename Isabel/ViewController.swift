@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
   @IBAction func clearButton(_ sender: UIButton) {
     notesTextView.text = ""
-    if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+    if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsQuickNotes") {
       userDefaults.set(notesTextView.text, forKey: "notes")
       userDefaults.synchronize()
     }
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     swipeGestureRecognizer.direction = .down
     notesTextView.addGestureRecognizer(swipeGestureRecognizer)
     
-    if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+    if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsQuickNotes") {
       notesTextView.text = userDefaults.string(forKey: "notes") ?? ""
     }
   }
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
   func endEditing() {
     if notesTextView.isFirstResponder {
       notesTextView.resignFirstResponder()
-      if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+      if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsQuickNotes") {
         userDefaults.set(notesTextView.text, forKey: "notes")
         userDefaults.synchronize()
       }

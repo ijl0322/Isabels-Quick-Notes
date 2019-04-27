@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Isabel-Regular.ttf">
+            <string>Isabel-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,40 +23,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="KIU-As-9Q3">
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="watercolor" translatesAutoresizingMaskIntoConstraints="NO" id="KIU-As-9Q3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zte-NF-bH7">
-                                <rect key="frame" x="20" y="90" width="335" height="350"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="hello" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zte-NF-bH7">
+                                <rect key="frame" x="20" y="95" width="335" height="350"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="T4c-eB-PG8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Isabel-Regular" family="Isabel" pointSize="35"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-Gt-Gbz">
-                                <rect key="frame" x="276" y="40" width="79" height="30"/>
+                                <rect key="frame" x="254" y="40" width="101" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-qF-Keg">
-                                        <rect key="frame" x="0.0" y="0.0" width="36" height="30"/>
-                                        <state key="normal" title="Clear"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-qF-Keg" userLabel="clearButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="35"/>
+                                        <fontDescription key="fontDescription" name="Isabel-Regular" family="Isabel" pointSize="25"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" red="0.0021824867849999999" green="0.45564736389999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Za-He-udP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-PX-5UF">
-                                        <rect key="frame" x="45" y="0.0" width="34" height="30"/>
-                                        <state key="normal" title="Save"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-PX-5UF" userLabel="saveButton">
+                                        <rect key="frame" x="56" y="0.0" width="45" height="35"/>
+                                        <fontDescription key="fontDescription" name="Isabel-Regular" family="Isabel" pointSize="25"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.0021824867848440066" green="0.45564736394165228" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Flm-pQ-LlO"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrk-zS-6jv">
-                                <rect key="frame" x="20" y="40" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrk-zS-6jv" userLabel="SettingsButton">
+                                <rect key="frame" x="20" y="40" width="78" height="35"/>
+                                <fontDescription key="fontDescription" name="Isabel-Regular" family="Isabel" pointSize="25"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <segue destination="hKf-Lz-OeS" kind="show" identifier="settingsSegue" id="rMo-Hq-Wu3"/>
@@ -146,6 +158,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="750" height="1334"/>
+        <image name="watercolor" width="750" height="1334"/>
     </resources>
 </document>

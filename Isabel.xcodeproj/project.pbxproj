@@ -17,6 +17,8 @@
 		7AAC9DEB21827C8100E680C4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC9DEA21827C8100E680C4 /* TodayViewController.swift */; };
 		7AAC9DEE21827C8100E680C4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC9DEC21827C8100E680C4 /* MainInterface.storyboard */; };
 		7AAC9DF221827C8100E680C4 /* Isabel's Quick Notes.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7AAC9DE521827C8100E680C4 /* Isabel's Quick Notes.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7AB269EB219208A600E48EEE /* Isabel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AB269EA219208A600E48EEE /* Isabel-Regular.ttf */; };
+		7AB269EC219208A600E48EEE /* Isabel-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AB269EA219208A600E48EEE /* Isabel-Regular.ttf */; };
 		7AD618022183BBA500656E75 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD618012183BBA500656E75 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,7 @@
 		7AAC9DEA21827C8100E680C4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		7AAC9DED21827C8100E680C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		7AAC9DEF21827C8100E680C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AB269EA219208A600E48EEE /* Isabel-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Isabel-Regular.ttf"; sourceTree = "<group>"; };
 		7AD618012183BBA500656E75 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		7AEFBC7C21836C96005B23EA /* Isabel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Isabel.entitlements; sourceTree = "<group>"; };
 		7AEFBC7D21836CE2005B23EA /* Isabel's Quick Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Isabel's Quick Notes.entitlements"; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 				7AAC9DD121827C3A00E680C4 /* ViewController.swift */,
 				7A930BFF218A297800A659F1 /* SettingsViewController.swift */,
 				7AAC9DD321827C3A00E680C4 /* Main.storyboard */,
+				7AB269EA219208A600E48EEE /* Isabel-Regular.ttf */,
 				7AAC9DD621827C3B00E680C4 /* Assets.xcassets */,
 				7AAC9DD821827C3B00E680C4 /* LaunchScreen.storyboard */,
 				7AAC9DDB21827C3B00E680C4 /* Info.plist */,
@@ -228,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AAC9DDA21827C3B00E680C4 /* LaunchScreen.storyboard in Resources */,
+				7AB269EB219208A600E48EEE /* Isabel-Regular.ttf in Resources */,
 				7AAC9DD721827C3B00E680C4 /* Assets.xcassets in Resources */,
 				7AAC9DD521827C3A00E680C4 /* Main.storyboard in Resources */,
 			);
@@ -237,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB269EC219208A600E48EEE /* Isabel-Regular.ttf in Resources */,
 				7AD618022183BBA500656E75 /* Media.xcassets in Resources */,
 				7AAC9DEE21827C8100E680C4 /* MainInterface.storyboard in Resources */,
 			);
@@ -422,13 +428,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Isabel/Isabel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RM823C25G;
+				DEVELOPMENT_TEAM = K39564QAF6;
 				INFOPLIST_FILE = Isabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.isabeljlee.Isabel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isabeljlee.IsabelsQuickNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -442,13 +448,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Isabel/Isabel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RM823C25G;
+				DEVELOPMENT_TEAM = K39564QAF6;
 				INFOPLIST_FILE = Isabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.isabeljlee.Isabel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isabeljlee.IsabelsQuickNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,14 +466,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Isabel's Quick Notes/Isabel's Quick Notes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RM823C25G;
+				DEVELOPMENT_TEAM = K39564QAF6;
 				INFOPLIST_FILE = "Isabel's Quick Notes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isabeljlee.Isabel.Isabel-s-Quick-Notes";
+				PRODUCT_BUNDLE_IDENTIFIER = com.isabeljlee.IsabelsQuickNotes.todaysExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -480,14 +486,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Isabel's Quick Notes/Isabel's Quick Notes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7RM823C25G;
+				DEVELOPMENT_TEAM = K39564QAF6;
 				INFOPLIST_FILE = "Isabel's Quick Notes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isabeljlee.Isabel.Isabel-s-Quick-Notes";
+				PRODUCT_BUNDLE_IDENTIFIER = com.isabeljlee.IsabelsQuickNotes.todaysExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;

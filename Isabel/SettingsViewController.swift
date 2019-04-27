@@ -27,7 +27,7 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate, 
   }
   
   @IBAction func toggleBackgroundImage(_ sender: UIButton) {
-    if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+    if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsQuickNotes") {
       let backgroundOn = userDefaults.bool(forKey: "toggleBackgroundImage")
       userDefaults.set(!backgroundOn, forKey: "toggleBackgroundImage")
       userDefaults.synchronize()
@@ -42,7 +42,7 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate, 
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
-        if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+        if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsQuickNotes") {
           let title = userDefaults.bool(forKey: "toggleBackgroundImage") ? "ON" : "OFF"
           toggleBackgroundButton.setTitle(title, for: UIControlState.normal)
         }
@@ -53,7 +53,7 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate, 
     let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
     if pickedImage !== nil {
       print("image selected")
-      let archiveURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.isabeljlee.isabelsNoteApp")!.appendingPathComponent("photo.jpeg")
+      let archiveURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.isabeljlee.isabelsQuickNotes")!.appendingPathComponent("photo.jpeg")
       print(archiveURL)
       let jpgImageData = UIImageJPEGRepresentation(pickedImage!, 1.0)
       do {

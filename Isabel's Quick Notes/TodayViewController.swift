@@ -21,7 +21,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   override func viewDidLoad() {
         super.viewDidLoad()
         var notes = "Nothing!"
-        if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+        if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsQuickNotes") {
           notes = userDefaults.string(forKey: "notes") ?? "Nothing!"
           if notes == "" {
             notes = "Nothing!"
@@ -31,7 +31,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         // Do any additional setup after loading the view from its nib.
     
-        let archiveURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.isabeljlee.isabelsNoteApp")!.appendingPathComponent("photo.jpeg")
+        let archiveURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.isabeljlee.isabelsQuickNotes")!.appendingPathComponent("photo.jpeg")
         let image = UIImage(contentsOfFile: archiveURL.path)
         imageView.image = image
     }
@@ -54,7 +54,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
       let expanded = activeDisplayMode == .expanded
       preferredContentSize = expanded ? CGSize(width: maxSize.width, height: 200) : maxSize
-      if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsNoteApp") {
+      if let userDefaults = UserDefaults(suiteName: "group.isabeljlee.isabelsQuickNotes") {
         let backgroundImageOn = userDefaults.bool(forKey: "toggleBackgroundImage")
         if backgroundImageOn {
           notesLabel.alpha = expanded ? 0 : 1

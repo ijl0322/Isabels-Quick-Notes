@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.isabeljlee.isabelsNoteApp</string>
+		<string>group.isabeljlee.isabelsQuickNotes</string>
 	</array>
 </dict>
 </plist>
